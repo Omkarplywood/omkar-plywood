@@ -727,10 +727,12 @@ body.modal-open { overflow: hidden; }
 .tone-lam { background: linear-gradient(145deg, #4a3728, #8d6e4c); }
 .tone-marble { background: linear-gradient(145deg, #9a9a9a, #e8e4dc); }
 .tone-granite { background: linear-gradient(145deg, #3d4a3a, #7a8a72); }
+.tone-adhesive { background: linear-gradient(145deg, #1a4a8a, #4a8fd4); }
 
 .tone-ply svg, .tone-block svg, .tone-lam svg { fill: rgba(255,255,255,0.9); }
 .tone-marble svg { fill: rgba(61, 41, 20, 0.55); }
 .tone-granite svg { fill: rgba(255,255,255,0.85); }
+.tone-adhesive svg { fill: rgba(255,255,255,0.9); }
 
 /* Empty state */
 .empty-state {

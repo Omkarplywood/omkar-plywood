@@ -41,6 +41,13 @@
       tone: "tone-granite",
       icon: "granite",
     },
+    {
+      id: "adhesives",
+      name: "Adhesives",
+      short: "Woodworking glues & sealants",
+      tone: "tone-adhesive",
+      icon: "droplet",
+    },
   ];
 
   const PRODUCTS = [
@@ -185,6 +192,17 @@
       desc: "Economical dark stone for utility floors, staircases and project work. Ask for current Mumbai rates.",
       price: "Ask for price",
     },
+    {
+      id: "adh-fevicol-marine",
+      category: "adhesives",
+      name: "Fevicol Marine Waterproof Adhesive",
+      specs: ["Pidilite Fevicol Marine", "Waterproof woodworking adhesive"],
+      detail: ["Brand: Pidilite Fevicol Marine", "Type: Waterproof woodworking adhesive", "Use: Plywood, laminates, wet-area carpentry", "Pack: Tub & pouch options"],
+      desc: "Pidilite Fevicol Marine — waterproof woodworking adhesive for plywood, laminates and wet-area joinery. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-marine-tub.jpg",
+      images: ["images/fevicol-marine-tub.jpg", "images/fevicol-marine-pouch.webp"],
+    },
   ];
 
   const ICONS = {
@@ -193,6 +211,7 @@
     layers: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5zm0 8l9 5-9 5-9-5 9-5z"/></svg>',
     stone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18l4-12h4l2 5 2-3h4l3 10H3z"/></svg>',
     granite: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="14" cy="13" r="0.9" fill="currentColor"/><circle cx="11" cy="16" r="0.7" fill="currentColor"/></svg>',
+    droplet: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 0-7 8-7 12a7 7 0 0014 0c0-4-7-12-7-12z"/></svg>',
   };
 
   let activeFilter = "all";
@@ -270,6 +289,7 @@
       laminates: "Laminates",
       marble: "Marble",
       granite: "Granite",
+      adhesives: "Adhesives",
     };
     $$("#filterChips .chip").forEach((btn) => {
       const f = btn.dataset.filter;
