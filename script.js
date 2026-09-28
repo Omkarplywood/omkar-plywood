@@ -47,11 +47,12 @@
     {
       id: "ply-bwp-18",
       category: "plywood",
-      name: "BWP Marine Plywood 18mm",
-      specs: ["Thickness: 18 mm", "Size: 8 × 4 ft"],
-      detail: ["Grade: BWP / IS 710", "Core: Hardwood", "Use: Kitchens, wet areas"],
-      desc: "Boiling water proof plywood suitable for kitchens, bathrooms and exterior-facing carpentry. Ask for brand and current stock.",
+      name: "Century Sainik 710 Marine Plywood",
+      specs: ["BWP / IS:710", "Waterproof by CenturyPly"],
+      detail: ["Grade: BWP / IS:710", "Brand: CenturyPly Sainik 710", "Type: Marine / waterproof plywood", "Use: Kitchens, wet areas, exterior-facing carpentry"],
+      desc: "Century Sainik 710 marine plywood — BWP / IS:710 waterproof sheets from CenturyPly. Ideal for kitchens, bathrooms and exterior-facing carpentry. Ask for thickness, size and current stock.",
       price: "Ask for price",
+      image: "images/sainik-710.jpg",
     },
     {
       id: "ply-mr-12",
@@ -302,8 +303,15 @@
           '">' +
           '<div class="product-visual ' +
           cat.tone +
+          (p.image ? " has-image" : "") +
           '">' +
-          ICONS[cat.icon] +
+          (p.image
+            ? '<img src="' +
+              p.image +
+              '" alt="' +
+              p.name +
+              '" loading="lazy" />'
+            : ICONS[cat.icon]) +
           "</div>" +
           '<div class="product-body">' +
           '<p class="product-cat">' +
@@ -342,8 +350,11 @@
     $("#modalCat").textContent = cat.name;
     $("#modalPrice").textContent = p.price;
     $("#modalDesc").textContent = p.desc;
-    $("#modalVisual").className = "modal-visual " + cat.tone;
-    $("#modalVisual").innerHTML = ICONS[cat.icon];
+    $("#modalVisual").className =
+      "modal-visual " + cat.tone + (p.image ? " has-image" : "");
+    $("#modalVisual").innerHTML = p.image
+      ? '<img src="' + p.image + '" alt="' + p.name + '" />'
+      : ICONS[cat.icon];
     $("#modalSpecs").innerHTML = (p.detail || p.specs)
       .map((s) => {
         const parts = s.split(":");
