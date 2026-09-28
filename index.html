@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OMKAR PLYWOOD — Quality plywood, laminates, marble & stone in Mumbai. Near CP Tank Circle. Wholesale & retail." />
+  <title>OMKAR PLYWOOD | Plywood & Marble — Mumbai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="OMKAR PLYWOOD home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">OMKAR <strong>PLYWOOD</strong></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#shop">Shop</a>
+        <a href="#trade">Trade</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/919819808552" class="btn btn-wa btn-sm" target="_blank" rel="noopener" aria-label="WhatsApp us">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Near CP Tank Circle · Mumbai 400004</p>
+        <h1>Quality plywood &amp; stone<br />for homes and projects</h1>
+        <p class="hero-lead">
+          Trusted supplier of plywood, block boards, laminates, marble &amp; granite —
+          for homeowners, builders and wholesale buyers across Mumbai.
+        </p>
+        <div class="hero-ctas">
+          <a href="#shop" class="btn btn-primary">Shop catalog</a>
+          <a href="https://wa.me/919819808552?text=Hi%20Omkar%20Plywood%2C%20I%27d%20like%20to%20enquire%20about%20your%20products." class="btn btn-outline" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+        <ul class="trust-row" aria-label="Highlights">
+          <li>Retail &amp; wholesale</li>
+          <li>CP Tank, Mumbai</li>
+          <li>Ask for price · No online checkout</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section categories" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <h2>Shop by category</h2>
+          <p>Browse our range — request a price or message us on WhatsApp for current rates.</p>
+        </div>
+        <div class="category-grid" id="categoryGrid" role="list">
+          <!-- Filled by JS or static -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section-head products-head">
+          <div>
+            <h2>Products</h2>
+            <p id="filterLabel">Showing all categories</p>
+          </div>
+          <div class="filter-chips" id="filterChips" role="group" aria-label="Filter by category">
+            <button type="button" class="chip active" data-filter="all">All</button>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Inquiry -->
+    <section class="section inquiry" id="inquiry">
+      <div class="container inquiry-layout">
+        <div class="inquiry-copy">
+          <h2>Request a price</h2>
+          <p>
+            Tell us what you need — we’ll reply on WhatsApp with availability and rates.
+            Ideal for site quantities, project quotes and wholesale lots.
+          </p>
+          <ul class="inquiry-bullets">
+            <li>Same-day response on WhatsApp when possible</li>
+            <li>Retail cuts &amp; full sheets</li>
+            <li>Contractor &amp; B2B rates on request</li>
+          </ul>
+          <a href="https://wa.me/919819808552" class="btn btn-wa" target="_blank" rel="noopener">
+            Or chat now: +91 98198 08552
+          </a>
+        </div>
+        <form class="inquiry-form card" id="inquiryForm" novalidate>
+          <div class="form-row">
+            <label for="name">Your name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Full name" />
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+91 …" />
+          </div>
+          <div class="form-row">
+            <label for="product">Product interest</label>
+            <input type="text" id="product" name="product" placeholder="e.g. 18mm BWP plywood, marble slab" list="productSuggestions" />
+            <datalist id="productSuggestions"></datalist>
+          </div>
+          <div class="form-row">
+            <label for="customerType">Customer type</label>
+            <select id="customerType" name="customerType">
+              <option value="Homeowner">Homeowner / Retail</option>
+              <option value="Contractor">Builder / Contractor</option>
+              <option value="Wholesale">Wholesale / B2B</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="notes">Quantity / notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Sizes, thickness, quantity, delivery area…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send on WhatsApp</button>
+          <p class="form-hint">Opens WhatsApp with your enquiry pre-filled. No payment on this site.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Trade / B2B -->
+    <section class="section trade" id="trade">
+      <div class="container trade-card">
+        <div class="trade-content">
+          <p class="eyebrow">For builders &amp; dealers</p>
+          <h2>Trade &amp; wholesale</h2>
+          <p>
+            Volume pricing for contractors, interior firms and resellers. Share your material list —
+            we supply plywood sheets, flush doors, laminates and stone for projects across Mumbai.
+          </p>
+          <a href="#inquiry" class="btn btn-primary" id="tradeCta">Request wholesale rates</a>
+        </div>
+        <div class="trade-aside" aria-hidden="true">
+          <div class="trade-stat"><span>Sheets</span><strong>Full loads</strong></div>
+          <div class="trade-stat"><span>Stone</span><strong>Slabs &amp; lots</strong></div>
+          <div class="trade-stat"><span>Support</span><strong>Site quotes</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / About -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Visit &amp; contact</h2>
+          <p>OMKAR PLYWOOD — plywood, laminates &amp; stone near CP Tank Circle, Mumbai.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card card">
+            <h3>Address</h3>
+            <p>Near CP Tank Circle<br />Mumbai 400004<br />Maharashtra, India</p>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=CP+Tank+Circle+Mumbai+400004" target="_blank" rel="noopener">Open in Google Maps →</a>
+          </div>
+          <div class="contact-card card">
+            <h3>Call / WhatsApp</h3>
+            <p><a href="tel:+919819808552">+91 98198 08552</a></p>
+            <a href="https://wa.me/919819808552" class="btn btn-wa btn-sm" target="_blank" rel="noopener">Message on WhatsApp</a>
+          </div>
+          <div class="contact-card card">
+            <h3>About us</h3>
+            <p>
+              We supply quality plywood, block boards, flush doors, laminates, veneers,
+              marble and granite for homes, interiors and commercial projects.
+              Ask for current rates — we serve retail and wholesale buyers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>OMKAR PLYWOOD</strong>
+        <p>Near CP Tank Circle, Mumbai 400004</p>
+      </div>
+      <div class="footer-links">
+        <a href="#shop">Shop</a>
+        <a href="#inquiry">Request price</a>
+        <a href="https://wa.me/919819808552" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <p class="footer-note">Catalog &amp; enquiry only · No online payments</p>
+    </div>
+  </footer>
+
+  <!-- Product detail modal -->
+  <div class="modal" id="productModal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel card">
+      <button type="button" class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <div class="modal-visual" id="modalVisual" aria-hidden="true"></div>
+      <div class="modal-body">
+        <p class="product-cat" id="modalCat"></p>
+        <h3 id="modalTitle"></h3>
+        <p class="modal-price" id="modalPrice">Ask for price</p>
+        <ul class="spec-list" id="modalSpecs"></ul>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-primary" id="modalRequest">Request price</button>
+          <a class="btn btn-wa" id="modalWa" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
