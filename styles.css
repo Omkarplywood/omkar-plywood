@@ -551,7 +551,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   position: relative;
   z-index: 1;
   width: min(100%, 520px);
-  max-height: min(90vh, 640px);
+  max-height: min(92vh, 720px);
   overflow: auto;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -581,13 +581,92 @@ ul { margin: 0; padding: 0; list-style: none; }
 .modal-visual svg { width: 72px; height: 72px; opacity: 0.9; }
 .modal-visual.has-image {
   background: #f3efe8;
-  height: 220px;
+  height: auto;
+  min-height: 220px;
+  max-height: none;
+  padding: 0.75rem 0.75rem 0.5rem;
+  overflow: visible;
 }
-.modal-visual img {
+.modal-visual.has-gallery {
+  padding-bottom: 0.65rem;
+}
+.modal-visual > img,
+.modal-gallery-main img {
+  width: 100%;
+  height: 100%;
+  max-height: min(42vh, 320px);
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.modal-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-items: stretch;
+}
+.modal-gallery-main {
+  width: 100%;
+  min-height: 200px;
+  max-height: min(42vh, 320px);
+  display: grid;
+  place-items: center;
+  background: #efe9df;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.modal-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  padding: 0 0.15rem;
+}
+.modal-thumb {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(42, 27, 12, 0.1);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.modal-thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
   display: block;
+  background: #f3efe8;
+  border-radius: 4px;
+}
+.modal-thumb:hover,
+.modal-thumb:focus-visible {
+  border-color: var(--teal);
+  outline: none;
+}
+.modal-thumb.active {
+  border-color: var(--walnut);
+  box-shadow: 0 0 0 1px var(--walnut);
+}
+@media (max-width: 480px) {
+  .modal-gallery-main {
+    min-height: 180px;
+    max-height: min(38vh, 280px);
+  }
+  .modal-visual > img,
+  .modal-gallery-main img {
+    max-height: min(38vh, 280px);
+  }
+  .modal-thumb {
+    width: 48px;
+    height: 48px;
+  }
 }
 .modal-body { padding: 1.35rem 1.5rem 1.6rem; }
 .modal-price {

@@ -53,6 +53,7 @@
       desc: "Century Sainik 710 marine plywood — BWP / IS:710 waterproof sheets from CenturyPly. Ideal for kitchens, bathrooms and exterior-facing carpentry. Ask for thickness, size and current stock.",
       price: "Ask for price",
       image: "images/sainik-710.jpg",
+      images: ["images/sainik-710.jpg", "images/sainik-710-sheet.jpg"],
     },
     {
       id: "ply-mr-12",
@@ -199,6 +200,17 @@
     return CATEGORIES.find((c) => c.id === id);
   }
 
+  function productImages(p) {
+    if (Array.isArray(p.images) && p.images.length) return p.images.filter(Boolean);
+    if (p.image) return [p.image];
+    return [];
+  }
+
+  function primaryImage(p) {
+    const imgs = productImages(p);
+    return imgs[0] || null;
+  }
+
   function waLink(text) {
     return WA_BASE + "?text=" + encodeURIComponent(text);
   }
@@ -297,17 +309,18 @@
     grid.innerHTML = list
       .map((p) => {
         const cat = catById(p.category);
+        const primary = primaryImage(p);
         return (
           '<article class="product-card" data-id="' +
           p.id +
           '">' +
           '<div class="product-visual ' +
           cat.tone +
-          (p.image ? " has-image" : "") +
+          (primary ? " has-image" : "") +
           '">' +
-          (p.image
+          (primary
             ? '<img src="' +
-              p.image +
+              primary +
               '" alt="' +
               p.name +
               '" loading="lazy" />'
@@ -350,11 +363,57 @@
     $("#modalCat").textContent = cat.name;
     $("#modalPrice").textContent = p.price;
     $("#modalDesc").textContent = p.desc;
-    $("#modalVisual").className =
-      "modal-visual " + cat.tone + (p.image ? " has-image" : "");
-    $("#modalVisual").innerHTML = p.image
-      ? '<img src="' + p.image + '" alt="' + p.name + '" />'
-      : ICONS[cat.icon];
+    const imgs = productImages(p);
+    const visual = $("#modalVisual");
+    visual.className =
+      "modal-visual " +
+      cat.tone +
+      (imgs.length ? " has-image" : "") +
+      (imgs.length > 1 ? " has-gallery" : "");
+    if (!imgs.length) {
+      visual.innerHTML = ICONS[cat.icon];
+    } else if (imgs.length === 1) {
+      visual.innerHTML =
+        '<div class="modal-gallery-main">' +
+        '<img src="' +
+        imgs[0] +
+        '" alt="' +
+        p.name +
+        '" />' +
+        "</div>";
+    } else {
+      visual.innerHTML =
+        '<div class="modal-gallery">' +
+        '<div class="modal-gallery-main">' +
+        '<img id="modalMainImg" src="' +
+        imgs[0] +
+        '" alt="' +
+        p.name +
+        '" />' +
+        "</div>" +
+        '<div class="modal-thumbs" role="tablist" aria-label="Product photos">' +
+        imgs
+          .map(function (src, i) {
+            return (
+              '<button type="button" class="modal-thumb' +
+              (i === 0 ? " active" : "") +
+              '" data-gallery-src="' +
+              src +
+              '" aria-label="Photo ' +
+              (i + 1) +
+              '" aria-selected="' +
+              (i === 0 ? "true" : "false") +
+              '">' +
+              '<img src="' +
+              src +
+              '" alt="" loading="lazy" />' +
+              "</button>"
+            );
+          })
+          .join("") +
+        "</div>" +
+        "</div>";
+    }
     $("#modalSpecs").innerHTML = (p.detail || p.specs)
       .map((s) => {
         const parts = s.split(":");
@@ -449,6 +508,21 @@
         if (e.target.closest("[data-open-detail]") || e.target.closest(".product-visual")) {
           openModal(card.dataset.id);
         }
+      }
+
+      const thumb = e.target.closest("[data-gallery-src]");
+      if (thumb && modal && !modal.hidden) {
+        const src = thumb.dataset.gallerySrc;
+        const main = $("#modalMainImg");
+        if (main && src) {
+          main.src = src;
+          $$(".modal-thumb").forEach(function (t) {
+            const on = t === thumb;
+            t.classList.toggle("active", on);
+            t.setAttribute("aria-selected", on ? "true" : "false");
+          });
+        }
+        return;
       }
 
       if (e.target.closest("[data-close-modal]")) closeModal();
