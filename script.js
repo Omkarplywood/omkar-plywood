@@ -214,6 +214,17 @@
       image: "images/euro-7000-bucket.png",
       images: ["images/euro-7000-bucket.png", "images/euro-7000-pouch.jpg"],
     },
+    {
+      id: "adh-fevicol-heatx",
+      category: "adhesives",
+      name: "Fevicol HeatX Heatproof Adhesive",
+      specs: ["Pidilite Fevicol HeatX", "Heatproof woodworking adhesive"],
+      detail: ["Brand: Pidilite Fevicol HeatX", "Type: Heatproof woodworking adhesive", "Use: Woodworking, laminate pasting", "Pack: Can"],
+      desc: "Pidilite Fevicol HeatX — heatproof woodworking adhesive for woodworking and laminate pasting. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-heatx-can.jpg",
+      images: ["images/fevicol-heatx-can.jpg", "images/fevicol-heatx-promo.png"],
+    },
   ];
 
   const ICONS = {
