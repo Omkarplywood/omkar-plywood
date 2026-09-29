@@ -203,6 +203,17 @@
       image: "images/fevicol-marine-tub.jpg",
       images: ["images/fevicol-marine-tub.jpg", "images/fevicol-marine-pouch.webp"],
     },
+    {
+      id: "adh-euro-7000-wp",
+      category: "adhesives",
+      name: "Euro 7000 WP 2in1 Waterproof Adhesive",
+      specs: ["Euro 7000 WP 2in1", "Waterproof wood adhesive, fast drying"],
+      detail: ["Brand: Euro 7000 WP 2in1", "Type: Waterproof wood adhesive", "Features: Waterproof & fast drying", "Use: Plywood, laminates, woodworking", "Pack: Bucket & pouch options"],
+      desc: "Euro 7000 WP 2in1 — waterproof, fast-drying wood adhesive for plywood, laminates and joinery. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/euro-7000-bucket.png",
+      images: ["images/euro-7000-bucket.png", "images/euro-7000-pouch.jpg"],
+    },
   ];
 
   const ICONS = {
