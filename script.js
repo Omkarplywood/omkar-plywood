@@ -236,6 +236,17 @@
       image: "images/abro-tape-pack.jpg",
       images: ["images/abro-tape-pack.jpg", "images/abro-tape-tin.jpg", "images/abro-tape-rolls.jpg", "images/abro-tape-use.jpg"],
     },
+    {
+      id: "adh-fevicol-hiper-star",
+      category: "adhesives",
+      name: "Fevicol Hi-Per Star",
+      specs: ["Pidilite Fevicol Hi-Per Star", "High-performance woodworking adhesive, D3"],
+      detail: ["Brand: Pidilite Fevicol Hi-Per Star", "Type: Synthetic resin adhesive", "Certification: D3 (EN 204/205)", "Features: High coverage up to 1.5 sheet/kg, high grab, waterproof, anti-bubble", "Trimming: 1.5 hours", "Use: Premium lamination and veneer pasting", "Pack: Jar & pouch options"],
+      desc: "Pidilite Fevicol Hi-Per Star — high-performance woodworking adhesive for premium lamination and veneer pasting. Certified D3 (EN 204/205), waterproof with anti-bubble formulation. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-hiper-star-jar.jpg",
+      images: ["images/fevicol-hiper-star-jar.jpg", "images/fevicol-hiper-star-pouch.jpg", "images/fevicol-hiper-star-info.jpg"],
+    },
   ];
 
   const ICONS = {
