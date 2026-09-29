@@ -225,6 +225,17 @@
       image: "images/fevicol-heatx-can.jpg",
       images: ["images/fevicol-heatx-can.jpg", "images/fevicol-heatx-promo.png"],
     },
+    {
+      id: "adh-abro-6123",
+      category: "adhesives",
+      name: "Abro High Performance Masking Tape 6123",
+      specs: ["Abro 6123", "High performance masking tape, 150+ microns"],
+      detail: ["Brand: AIPL Abro 6123", "Type: High performance masking tape", "Thickness: 150+ microns", "Features: High adhesion, clean removal, no residue, sharp edge finish", "Use: Painting, finishing and masking"],
+      desc: "AIPL Abro 6123 — high performance masking tape, 150+ microns, for painting and finishing. High adhesion with clean removal. Ask for width, length and current price.",
+      price: "Ask for price",
+      image: "images/abro-tape-pack.jpg",
+      images: ["images/abro-tape-pack.jpg", "images/abro-tape-tin.jpg", "images/abro-tape-rolls.jpg", "images/abro-tape-use.jpg"],
+    },
   ];
 
   const ICONS = {
