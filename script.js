@@ -247,6 +247,17 @@
       image: "images/fevicol-hiper-star-jar.jpg",
       images: ["images/fevicol-hiper-star-jar.jpg", "images/fevicol-hiper-star-pouch.jpg", "images/fevicol-hiper-star-info.jpg"],
     },
+    {
+      id: "adh-fevicol-hiper",
+      category: "adhesives",
+      name: "Fevicol Hi-Per",
+      specs: ["Pidilite Fevicol Hi-Per", "High-performance woodworking adhesive, D3"],
+      detail: ["Brand: Pidilite Fevicol Hi-Per", "Type: High-performance woodworking adhesive", "Certification: D3", "Features: Anti-bubble, waterproof", "Use: Premium laminates and veneers", "Pack: Bucket & pouch options"],
+      desc: "Pidilite Fevicol Hi-Per — high-performance woodworking adhesive for premium laminates and veneers. D3 certified, waterproof and anti-bubble. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-hiper-bucket.jpg",
+      images: ["images/fevicol-hiper-bucket.jpg", "images/fevicol-hiper-promo.jpg", "images/fevicol-hiper-pouch.jpg"],
+    },
   ];
 
   const ICONS = {
