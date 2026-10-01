@@ -288,6 +288,17 @@
       images: ["images/fevicol-nail-free-ultra-kwik.jpg", "images/fevicol-nail-free-ultra-kwik-mirror.jpg", "images/fevicol-nail-free-ultra-kwik-features.jpg", "images/fevicol-nail-free-ultra-kwik-shelves.jpg"],
     },
     {
+      id: "adh-araldite-standard",
+      category: "adhesives",
+      name: "Araldite Standard Epoxy",
+      specs: ["Araldite Standard", "Two-part epoxy adhesive"],
+      detail: ["Brand: Araldite", "Type: Two-part epoxy", "Resin: Standard Epoxy Resin AW 106 IN", "Hardener: Standard Epoxy Hardener HV 953 IN", "Claims: Highest bond strength, multi substrate, heat and chemical resistant, waterproof, 75 years", "Also shown: Robust resin matrix, 120 kg/sq.cm impact resistance, 45-50 min pot life, bonds heavy granite, wood, metal and ceramic, 470+ kg load capacity"],
+      desc: "Araldite Standard — two-part epoxy, Standard Epoxy Resin AW 106 IN and Standard Epoxy Hardener HV 953 IN. Pack claims highest bond strength, multi substrate use, heat and chemical resistance, waterproof, and 75 years. Also shown: robust resin matrix with 120 kg/sq.cm impact resistance, 45–50 min pot life, bonds heavy granite, wood, metal and ceramic, and 470+ kg load capacity. Ask for current price.",
+      price: "Ask for price",
+      image: "images/araldite-standard.jpg",
+      images: ["images/araldite-standard.jpg", "images/araldite-standard-use.jpg"],
+    },
+    {
       id: "mnt-terminator-clear",
       category: "maintenance",
       name: "Terminator Clear Wood Preservative",
