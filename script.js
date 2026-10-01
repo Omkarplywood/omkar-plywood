@@ -310,6 +310,17 @@
       images: ["images/fevi-seal-neutral-pro.jpg", "images/fevi-seal-neutral-pro-promo.jpg"],
     },
     {
+      id: "adh-fevicol-ezee-spray",
+      category: "adhesives",
+      name: "Fevicol Ezee Spray",
+      specs: ["Pidilite Fevicol Ezee Spray", "Multi-purpose sprayable contact adhesive, 353 g (500 ml)"],
+      detail: ["Brand: Pidilite / Fevicol", "Type: Multi-purpose sprayable contact adhesive and woodworking adhesive", "Pack: 353 g (500 ml) can", "Features: Instant bonding, excellent heat resistance, fast grab, controlled spray (low, medium, high)", "Uses: Ceiling lamination, vertical lamination, soundproofing, small-area veneer pasting without nails, acoustic foam panelling, DIY household projects", "Application: Hold about 10 seconds; poster claims no curing wait"],
+      desc: "Pidilite Fevicol Ezee Spray — multi-purpose sprayable contact adhesive and woodworking adhesive in a 353 g (500 ml) can. Instant bonding, excellent heat resistance, fast grab, and controlled spray (low, medium and high). For ceiling lamination, vertical lamination, soundproofing, small-area veneer pasting without nails, acoustic foam panelling and DIY household projects. Poster says hold about 10 seconds, with no curing wait.",
+      price: "Ask for price",
+      image: "images/fevicol-ezee-spray.jpg",
+      images: ["images/fevicol-ezee-spray.jpg", "images/fevicol-ezee-spray-use.jpg", "images/fevicol-ezee-spray-uses.jpg"],
+    },
+    {
       id: "mnt-terminator-clear",
       category: "maintenance",
       name: "Terminator Clear Wood Preservative",
