@@ -48,6 +48,13 @@
       tone: "tone-adhesive",
       icon: "droplet",
     },
+    {
+      id: "maintenance",
+      name: "Maintenance and repair",
+      short: "Wood preservatives & care",
+      tone: "tone-repair",
+      icon: "shield",
+    },
   ];
 
   const PRODUCTS = [
@@ -280,6 +287,17 @@
       image: "images/fevicol-nail-free-ultra-kwik.jpg",
       images: ["images/fevicol-nail-free-ultra-kwik.jpg", "images/fevicol-nail-free-ultra-kwik-mirror.jpg", "images/fevicol-nail-free-ultra-kwik-features.jpg", "images/fevicol-nail-free-ultra-kwik-shelves.jpg"],
     },
+    {
+      id: "mnt-terminator-clear",
+      category: "maintenance",
+      name: "Terminator Clear Wood Preservative",
+      specs: ["Terminator / Anpex", "Clear wood preservative"],
+      detail: ["Brand: Terminator / Anpex", "Type: Clear wood preservative", "Formula: Anpex Insta Kill", "Claims: Kills termites, penetrates deep", "Pack claims: Eco friendly, harmless to the skin, DIY, non-staining, long lasting", "Use: Home and professional; safe for wood", "Pack: Can with spray trigger"],
+      desc: "Terminator Clear — clear wood preservative from Terminator / Anpex. Anpex Insta Kill formula that kills termites and penetrates deep. Pack claims: eco friendly, harmless to the skin, DIY, non-staining, long lasting, for home and professional use, and safe for wood. Ask for current price.",
+      price: "Ask for price",
+      image: "images/terminator-clear.webp",
+      images: ["images/terminator-clear.webp", "images/terminator-clear-features.jpg", "images/terminator-clear-defense.jpg"],
+    },
   ];
 
   const ICONS = {
@@ -289,6 +307,7 @@
     stone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18l4-12h4l2 5 2-3h4l3 10H3z"/></svg>',
     granite: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="14" cy="13" r="0.9" fill="currentColor"/><circle cx="11" cy="16" r="0.7" fill="currentColor"/></svg>',
     droplet: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 0-7 8-7 12a7 7 0 0014 0c0-4-7-12-7-12z"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5.25-3.4 8.9-8 11-4.6-2.1-8-5.75-8-11V5l8-3z"/></svg>',
   };
 
   let activeFilter = "all";
@@ -367,6 +386,7 @@
       marble: "Marble",
       granite: "Granite",
       adhesives: "Adhesives",
+      maintenance: "Maintenance",
     };
     $$("#filterChips .chip").forEach((btn) => {
       const f = btn.dataset.filter;
