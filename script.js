@@ -258,6 +258,17 @@
       image: "images/fevicol-hiper-bucket.jpg",
       images: ["images/fevicol-hiper-bucket.jpg", "images/fevicol-hiper-promo.jpg", "images/fevicol-hiper-pouch.jpg"],
     },
+    {
+      id: "adh-fevicol-nail-free-ultra",
+      category: "adhesives",
+      name: "Fevicol Nail Free Ultra",
+      specs: ["Pidilite Fevicol Nail Free Ultra", "Multipurpose adhesive sealant"],
+      detail: ["Brand: Pidilite Fevicol Nail Free Ultra", "Type: Multisubstrate adhesive sealant", "Features: Strong grab, heat and water resistant, super fast bonding", "Bonds: ACP, metal, concrete, stone, ceramic tiles", "Use: Wet areas; paintable after curing", "Pack: Cartridge"],
+      desc: "Pidilite Fevicol Nail Free Ultra — multipurpose adhesive sealant with strong grab, heat and water resistance, and super fast bonding. Bonds ACP, metal, concrete, stone and ceramic tiles. Suitable for wet areas and paintable after curing. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-nail-free-ultra.jpg",
+      images: ["images/fevicol-nail-free-ultra.jpg", "images/fevicol-nail-free-ultra-features.jpg", "images/fevicol-nail-free-ultra-gun.jpg", "images/fevicol-nail-free-ultra-promo.jpg"],
+    },
   ];
 
   const ICONS = {
