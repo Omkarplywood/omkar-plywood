@@ -269,6 +269,17 @@
       image: "images/fevicol-nail-free-ultra.jpg",
       images: ["images/fevicol-nail-free-ultra.jpg", "images/fevicol-nail-free-ultra-features.jpg", "images/fevicol-nail-free-ultra-gun.jpg", "images/fevicol-nail-free-ultra-promo.jpg"],
     },
+    {
+      id: "adh-fevicol-nail-free-ultra-kwik",
+      category: "adhesives",
+      name: "Fevicol Nail Free Ultra Kwik",
+      specs: ["Pidilite Fevicol Nail Free Ultra Kwik", "Multisubstrate adhesive sealant"],
+      detail: ["Brand: Pidilite Fevicol Nail Free Ultra Kwik", "Type: Multisubstrate adhesive sealant", "Features: Instant grab, strong bond, heat and water resistant, solvent-free", "Claims: 1 kg in 10 seconds; quick mirror fixing and shelves/brackets, drill-free", "Suitable for: Mirror, ACP, ceramic tiles, MDF, mouldings, marble, wood", "Pack: Small tube and cartridge"],
+      desc: "Pidilite Fevicol Nail Free Ultra Kwik — solvent-free multisubstrate adhesive sealant with instant grab, a strong bond, and heat and water resistance. Pack claims 1 kg in 10 seconds, with drill-free mirror fixing and shelves or brackets. Suitable for mirror, ACP, ceramic tiles, MDF, mouldings, marble and wood. Shown as a small tube and a cartridge. Ask for current price.",
+      price: "Ask for price",
+      image: "images/fevicol-nail-free-ultra-kwik.jpg",
+      images: ["images/fevicol-nail-free-ultra-kwik.jpg", "images/fevicol-nail-free-ultra-kwik-mirror.jpg", "images/fevicol-nail-free-ultra-kwik-features.jpg", "images/fevicol-nail-free-ultra-kwik-shelves.jpg"],
+    },
   ];
 
   const ICONS = {
