@@ -299,6 +299,17 @@
       images: ["images/araldite-standard.jpg", "images/araldite-standard-use.jpg"],
     },
     {
+      id: "adh-fevi-seal-neutral-pro",
+      category: "adhesives",
+      name: "Fevi Seal Neutral Pro",
+      specs: ["Fevi Seal / Pidilite", "Neutral cure silicone sealant, 280 ml"],
+      detail: ["Brand: Fevi Seal / Pidilite (from the makers of Fevicol)", "Type: Neutral cure silicone sealant", "Pack: 280 ml", "Features: No corrosion, excellent adhesion, good weatherability, anti-fungal, high strength, long life", "Uses: Windows and door frames, bathrooms and kitchens, mirror and glass, interior gap filling", "Colours: Clear, black and white"],
+      desc: "Fevi Seal Neutral Pro from Pidilite (from the makers of Fevicol) — neutral cure silicone sealant, 280 ml. No corrosion, excellent adhesion, good weatherability, anti-fungal, high strength and long life. For windows and door frames, bathrooms and kitchens, mirror and glass, and interior gap filling. Available in clear, black and white.",
+      price: "Ask for price",
+      image: "images/fevi-seal-neutral-pro.jpg",
+      images: ["images/fevi-seal-neutral-pro.jpg", "images/fevi-seal-neutral-pro-promo.jpg"],
+    },
+    {
       id: "mnt-terminator-clear",
       category: "maintenance",
       name: "Terminator Clear Wood Preservative",
