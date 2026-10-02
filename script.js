@@ -321,6 +321,17 @@
       images: ["images/fevicol-ezee-spray.jpg", "images/fevicol-ezee-spray-use.jpg", "images/fevicol-ezee-spray-uses.jpg"],
     },
     {
+      id: "adh-fevicol-probond",
+      category: "adhesives",
+      name: "Fevicol Probond",
+      specs: ["Pidilite Fevicol Probond", "Special adhesive for PVC and acrylic laminates"],
+      detail: ["Brand: Pidilite / Fevicol", "Type: Woodworking adhesive", "Use: PVC and acrylic laminates", "Features: Easy to apply, high coverage, high grab"],
+      desc: "Pidilite Fevicol Probond — special adhesive for PVC and acrylic laminates, and a woodworking adhesive. Easy to apply, with high coverage and high grab. Ask for pack size and current price.",
+      price: "Ask for price",
+      image: "images/fevicol-probond.jpg",
+      images: ["images/fevicol-probond.jpg", "images/fevicol-probond-promo.jpg"],
+    },
+    {
       id: "mnt-terminator-clear",
       category: "maintenance",
       name: "Terminator Clear Wood Preservative",
