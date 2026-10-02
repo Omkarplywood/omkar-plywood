@@ -92,6 +92,17 @@
       images: ["images/green-710-sheet.jpg", "images/green-710-promo.png"],
     },
     {
+      id: "ply-players-mr",
+      category: "plywood",
+      name: "Players MR Ply",
+      specs: ["MR / AA", "IS 303:2024"],
+      detail: ["Grade: MR (moisture resistant), MR / AA", "Brand: Players Ply & Boards", "Standard: IS 303:2024, CML 6400158814", "Face: 100% gurjan face veneer", "Type: Plywood for general purpose"],
+      desc: "Players MR Ply from Players Ply & Boards — moisture-resistant (MR / AA) general-purpose plywood to IS 303:2024 (CML 6400158814), with 100% gurjan face veneer. Ask for thickness, size and current stock.",
+      price: "Ask for price",
+      image: "images/players-mr-ply.jpg",
+      images: ["images/players-mr-ply.jpg", "images/players-mr-ply-2.jpg"],
+    },
+    {
       id: "bb-flush-32",
       category: "blockboard",
       name: "Flush Door 32mm",
