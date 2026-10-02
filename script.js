@@ -103,6 +103,17 @@
       images: ["images/players-mr-ply.jpg", "images/players-mr-ply-2.jpg"],
     },
     {
+      id: "ply-legan-excell-marine",
+      category: "plywood",
+      name: "Legan Excell Marine Plywood",
+      specs: ["IS:710", "100% gurjan core"],
+      detail: ["Grade: IS:710 marine", "Brand: Legan Excell", "Standard: IS:710, CML 6985390", "Core: 100% red wood inside, 100% gurjan core", "Features: High nail holding capacity, bend resistance, high density panel", "Marks: IPIRTI, CE, FSC"],
+      desc: "Legan Excell Marine Plywood — IS:710 marine plywood (CML 6985390) with 100% red wood inside and a 100% gurjan core. High nail holding capacity, bend resistance and a high density panel. Marks shown: IPIRTI, CE and FSC. Ask for thickness, size and current stock.",
+      price: "Ask for price",
+      image: "images/legan-excell-marine.jpg",
+      images: ["images/legan-excell-marine.jpg", "images/legan-excell-report.jpg"],
+    },
+    {
       id: "bb-flush-32",
       category: "blockboard",
       name: "Flush Door 32mm",
