@@ -55,6 +55,13 @@
       tone: "tone-repair",
       icon: "shield",
     },
+    {
+      id: "moulding",
+      name: "Mouldings and decoratives",
+      short: "Corners & appliqués",
+      tone: "tone-mould",
+      icon: "mould",
+    },
   ];
 
   const PRODUCTS = [
@@ -364,6 +371,17 @@
       image: "images/terminator-clear.webp",
       images: ["images/terminator-clear.webp", "images/terminator-clear-features.jpg", "images/terminator-clear-defense.jpg"],
     },
+    {
+      id: "mould-decorative-corners",
+      category: "moulding",
+      name: "Decorative corners and appliqués",
+      specs: ["Premium mouldings", "Decorative corners & appliqués"],
+      detail: ["Type: Decorative corners and appliqués", "Range: Premium mouldings and decorative elements", "Design codes shown: 005, 006, 007, 008, 013, 014, 009, 010, 001, 012, 015, 016", "Features: Premium quality, exquisite designs, durable and long lasting, easy to install, smooth finish, lightweight, customizable"],
+      desc: "Omkar Plywood premium mouldings and decorative elements — decorative corners and appliqués. Premium quality, exquisite designs, durable and long lasting, easy to install, smooth finish, lightweight and customizable. Design codes shown: 005, 006, 007, 008, 013, 014, 009, 010, 001, 012, 015 and 016. Ask for current price.",
+      price: "Ask for price",
+      image: "images/decorative-corners.jpg",
+      images: ["images/decorative-corners.jpg"],
+    },
   ];
 
   const ICONS = {
@@ -374,6 +392,7 @@
     granite: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="8" cy="10" r="1.2" fill="currentColor"/><circle cx="14" cy="13" r="0.9" fill="currentColor"/><circle cx="11" cy="16" r="0.7" fill="currentColor"/></svg>',
     droplet: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 0-7 8-7 12a7 7 0 0014 0c0-4-7-12-7-12z"/></svg>',
     shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5.25-3.4 8.9-8 11-4.6-2.1-8-5.75-8-11V5l8-3z"/></svg>',
+    mould: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v3H6v5H3V3zm10 0h8v8h-3V6h-5V3zM3 13h3v5h5v3H3v-8zm13 5v-5h5v8h-8v-3h3z"/></svg>',
   };
 
   let activeFilter = "all";
@@ -453,6 +472,7 @@
       granite: "Granite",
       adhesives: "Adhesives",
       maintenance: "Maintenance",
+      moulding: "Mouldings",
     };
     $$("#filterChips .chip").forEach((btn) => {
       const f = btn.dataset.filter;
