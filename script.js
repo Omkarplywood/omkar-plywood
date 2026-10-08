@@ -382,6 +382,28 @@
       image: "images/decorative-corners.jpg",
       images: ["images/decorative-corners.jpg"],
     },
+    {
+      id: "mould-corners-cw",
+      category: "moulding",
+      name: "Corners (CW series)",
+      specs: ["Decorative corners", "CW1 to CW6"],
+      detail: ["Type: Decorative corner pieces for wall panel and frame moulding", "CW1: 240+240mm", "CW2: 250+250mm", "CW3: 160+160mm", "CW4: 220+220mm", "CW5: 160+160mm", "CW6: 500mm", "Moulding profiles shown alongside: W201, W101", "Colour shown: White", "Quote the code (e.g. CW1) when asking for price"],
+      desc: "Omkar Plywood Corners — decorative corner pieces for wall panel and frame moulding, shown in white. Codes and sizes: CW1 240+240mm, CW2 250+250mm, CW3 160+160mm, CW4 220+220mm, CW5 160+160mm and CW6 500mm. Moulding profiles W201 and W101 are shown alongside. Quote the code when you ask for the current price.",
+      price: "Ask for price",
+      image: "images/corners-cw.jpg",
+      images: ["images/corners-cw.jpg"],
+    },
+    {
+      id: "mould-corners-vol2",
+      category: "moulding",
+      name: "Corners Vol 2 (CR series)",
+      specs: ["Decorative corners", "CR-10 to CR-20"],
+      detail: ["Type: Decorative corner pieces for wall panel and frame moulding", "CR-10, CR-13, CR-11: with W-201 30mm moulding", "CR-12: with W-301 38mm moulding", "CR-14: with W-401 45mm moulding", "CR-15, CR-16: corner pieces", "CR-17, CR-18: arcs, 30mm", "CR-19, CR-20: arcs, 22mm", "Colour shown: White", "Quote the code (e.g. CR-10) when asking for price"],
+      desc: "Omkar Plywood Corners Vol 2 — decorative corner pieces for wall panel and frame moulding, shown in white. CR-10, CR-13 and CR-11 pair with W-201 30mm moulding; CR-12 with W-301 38mm; CR-14 with W-401 45mm. CR-15 and CR-16 are corner pieces. CR-17 and CR-18 are 30mm arcs; CR-19 and CR-20 are 22mm arcs. Quote the code when you ask for the current price.",
+      price: "Ask for price",
+      image: "images/corners-vol2.jpg",
+      images: ["images/corners-vol2.jpg"],
+    },
   ];
 
   const ICONS = {
