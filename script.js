@@ -62,6 +62,13 @@
       tone: "tone-mould",
       icon: "mould",
     },
+    {
+      id: "boards",
+      name: "Cement and building boards",
+      short: "Cement bonded particle boards",
+      tone: "tone-board",
+      icon: "board",
+    },
   ];
 
   const PRODUCTS = [
@@ -404,6 +411,17 @@
       image: "images/corners-vol2.jpg",
       images: ["images/corners-vol2.jpg"],
     },
+    {
+      id: "brd-bison-panel",
+      category: "boards",
+      name: "Bison Panel cement bonded particle board",
+      specs: ["Cement bonded particle board", "6 to 18 mm"],
+      detail: ["Brand: Bison Panel (NCL Group)", "Type: Cement bonded particle board, multipurpose building board", "Composition: about 62% cement, 28% wood, 10% water and chemicals", "Wood: fast-growing eucalyptus and casurina", "Standard: Conforms to IS 14276-1995", "Technology: Imported from Bison Werke, Germany", "Thicknesses shown: 6, 8, 10, 12, 15, 18 mm", "Uses shown: Furniture and shelving, wall cladding, building walls on steel frames"],
+      desc: "Bison Panel by NCL Group — a cement bonded particle board made of about 62% cement, 28% wood and 10% water and chemicals, using fast-growing eucalyptus and casurina wood. It combines the durability of cement with the easy workability of wood. Conforms to IS 14276-1995, made with imported technology from Bison Werke of Germany. Thicknesses shown: 6, 8, 10, 12, 15 and 18 mm. Used for furniture and shelving, wall cladding and building walls on steel frames. Ask for current price.",
+      price: "Ask for price",
+      image: "images/bison-panel-thickness.png",
+      images: ["images/bison-panel-thickness.png", "images/bison-panel-shelves.jpg", "images/bison-panel-building.jpg", "images/bison-panel-composition.png", "images/bison-panel-manual.jpg"],
+    },
   ];
 
   const ICONS = {
@@ -415,6 +433,7 @@
     droplet: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 0-7 8-7 12a7 7 0 0014 0c0-4-7-12-7-12z"/></svg>',
     shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5.25-3.4 8.9-8 11-4.6-2.1-8-5.75-8-11V5l8-3z"/></svg>',
     mould: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v3H6v5H3V3zm10 0h8v8h-3V6h-5V3zM3 13h3v5h5v3H3v-8zm13 5v-5h5v8h-8v-3h3z"/></svg>',
+    board: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h14l4 3H7L3 6zm0 2l4 3v8l-4-3V8zm5 3h13v8H8v-8z"/></svg>',
   };
 
   let activeFilter = "all";
@@ -495,6 +514,7 @@
       adhesives: "Adhesives",
       maintenance: "Maintenance",
       moulding: "Mouldings",
+      boards: "Boards",
     };
     $$("#filterChips .chip").forEach((btn) => {
       const f = btn.dataset.filter;
