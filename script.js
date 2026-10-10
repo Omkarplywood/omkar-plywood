@@ -69,6 +69,13 @@
       tone: "tone-board",
       icon: "board",
     },
+    {
+      id: "mdf",
+      name: "MDF and HDHMR boards",
+      short: "MDF, HDF and high-moisture-resistant boards",
+      tone: "tone-mdf",
+      icon: "mdf",
+    },
   ];
 
   const PRODUCTS = [
@@ -456,6 +463,42 @@
       image: "images/bison-panel-thickness.png",
       images: ["images/bison-panel-thickness.png", "images/bison-panel-shelves.jpg", "images/bison-panel-building.jpg", "images/bison-panel-composition.png", "images/bison-panel-manual.jpg"],
     },
+    {
+      id: "mdf-greenply-710-hdmr-hdf",
+      category: "mdf",
+      name: "Greenply 710 HDMR HDF",
+      specs: ["High-density moisture-resistant HDF", "20-year warranty as per Greenply"],
+      detail: ["Brand: Greenply", "Type: 710 HDMR HDF, high-density moisture-resistant fibreboard", "Claims: Stronger for longer; moisture resistant; high durability; made with German technology*", "Warranty: 20 years, terms as per Greenply", "Poster tagline: Best in class", "Part of the Greenply MDF range (Exterior MDF, Interior MDF, 710 HDMR HDF, Boil Pro 500), now ISI certified"],
+      desc: "Greenply 710 HDMR HDF — a high-density, moisture-resistant HDF board. \"Stronger for longer\": moisture resistant, high durability and made with German technology*. Comes with a 20-year warranty, terms as per Greenply. Part of the Greenply MDF range, now ISI certified. Ask for current price and thickness availability.",
+      price: "Ask for price",
+      image: "images/greenply-710-hdmr-hdf.jpg",
+      images: ["images/greenply-710-hdmr-hdf.jpg", "images/greenply-mdf-range.jpg"],
+      tags: ["mdf", "hdf", "hdmr", "hdhmr", "greenply", "710", "moisture resistant", "high density", "board"],
+    },
+    {
+      id: "mdf-greenply-mdf",
+      category: "mdf",
+      name: "Greenply MDF (Interior, Exterior, Boil Pro 500)",
+      specs: ["Interior, Exterior, Boil Pro 500", "ISI certified"],
+      detail: ["Brand: Greenply", "Range shown: Interior MDF, Exterior MDF, Boil Pro 500 (plus 710 HDMR HDF)", "Certification: ISI certified, as per Greenply", "Finish: Smooth surface, good for paint and laminate", "Use: Interior furniture and decorative panels", "Thicknesses shown in photo: 5, 6, 8, 10, 12, 15, 18, 25, 30, 35 mm (ask for availability)"],
+      desc: "Greenply MDF range — Interior MDF, Exterior MDF and Boil Pro 500, now ISI certified as per Greenply. MDF gives a smooth finish that is good for paint and laminate, is budget friendly, and suits interior furniture and decorative panels. Thicknesses shown in the photo range from 5 mm to 35 mm; ask for availability and current price.",
+      price: "Ask for price",
+      image: "images/greenply-mdf-range.jpg",
+      images: ["images/greenply-mdf-range.jpg", "images/mdf-thickness-range.jpg", "images/plywood-vs-mdf.jpg"],
+      tags: ["mdf", "medium density fibreboard", "fiberboard", "greenply", "interior mdf", "exterior mdf", "boil pro", "boil pro 500", "isi", "board"],
+    },
+    {
+      id: "mdf-hdhmr-marine-board",
+      category: "mdf",
+      name: "HDHMR Marine Board (Merino)",
+      specs: ["High density high moisture resistance", "Smooth calibrated surface"],
+      detail: ["Brand: Merino Marine Board", "Type: HDHMR — High Density High Moisture Resistance board", "Made of: High-density wood fibres", "Surface: Smooth calibrated surface", "Features: Moisture resistant, stronger than MDF", "Use: Kitchens, wardrobes and interior furniture"],
+      desc: "Merino Marine Board HDHMR — a High Density High Moisture Resistance board made from high-density wood fibres with a smooth calibrated surface. Moisture resistant and stronger than MDF, it suits kitchens, wardrobes and interior furniture. Ask for current price and thickness availability.",
+      price: "Ask for price",
+      image: "images/merino-hdhmr-marine-board.webp",
+      images: ["images/merino-hdhmr-marine-board.webp", "images/mdf-vs-hdhmr-vs-plywood.jpg"],
+      tags: ["hdhmr", "hdmr", "mdf", "hdf", "merino", "marine board", "moisture resistant", "high density", "kitchen", "wardrobe", "board"],
+    },
   ];
 
   const ICONS = {
@@ -468,6 +511,7 @@
     shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5.25-3.4 8.9-8 11-4.6-2.1-8-5.75-8-11V5l8-3z"/></svg>',
     mould: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h8v3H6v5H3V3zm10 0h8v8h-3V6h-5V3zM3 13h3v5h5v3H3v-8zm13 5v-5h5v8h-8v-3h3z"/></svg>',
     board: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h14l4 3H7L3 6zm0 2l4 3v8l-4-3V8zm5 3h13v8H8v-8z"/></svg>',
+    mdf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v4H3V5zm0 5h18v4H3v-4zm0 5h18v4H3v-4z"/></svg>',
   };
 
   let activeFilter = "all";
@@ -550,6 +594,7 @@
       maintenance: "Maintenance",
       moulding: "Mouldings",
       boards: "Boards",
+      mdf: "MDF",
     };
     $$("#filterChips .chip").forEach((btn) => {
       const f = btn.dataset.filter;
