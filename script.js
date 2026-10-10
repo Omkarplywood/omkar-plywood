@@ -379,6 +379,17 @@
       images: ["images/terminator-clear.webp", "images/terminator-clear-features.jpg", "images/terminator-clear-defense.jpg"],
     },
     {
+      id: "mnt-bubble-guard",
+      category: "maintenance",
+      name: "Bubble Guard floor protection sheet",
+      specs: ["250 GSM", "Hollow PP floor protection sheet"],
+      detail: ["Type: Floor protection sheet", "Material: Polypropylene (PP), corrugated honeycomb / bubble, extruded double-walled hollow profile", "Weight: 250 GSM", "Features: Impact resistant, water and chemical resistant, lightweight and easy to use, durable and tear resistant", "Structure: Pressure resistance, light weight, sound insulation", "Ideal for: Construction sites, renovation projects, moving and storage, commercial spaces, residential use", "Colours shown: Yellow, white, grey, black"],
+      desc: "Bubble Guard 250 GSM floor protection sheet — a hollow polypropylene (PP) bubble / honeycomb sheet laid over floors, marble, tiles and finished surfaces to protect them during construction, renovation, painting and shifting. Impact resistant, water and chemical resistant, lightweight and easy to use, durable and tear resistant. Ideal for construction sites, renovation projects, moving and storage, commercial spaces and residential use. Colours shown: yellow, white, grey and black. Ask for current price.",
+      price: "Ask for price",
+      image: "images/bubble-guard-poster.jpg",
+      images: ["images/bubble-guard-poster.jpg", "images/bubble-guard-sheet.jpg", "images/bubble-guard-stack.jpg", "images/bubble-guard-floor-room.jpg", "images/bubble-guard-floor-site.jpg", "images/bubble-guard-info.webp"],
+    },
+    {
       id: "mould-decorative-corners",
       category: "moulding",
       name: "Decorative corners and appliqués",
