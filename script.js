@@ -487,18 +487,6 @@
       images: ["images/greenply-mdf-range.jpg", "images/mdf-thickness-range.jpg", "images/plywood-vs-mdf.jpg"],
       tags: ["mdf", "medium density fibreboard", "fiberboard", "greenply", "interior mdf", "exterior mdf", "boil pro", "boil pro 500", "isi", "board"],
     },
-    {
-      id: "mdf-hdhmr-marine-board",
-      category: "mdf",
-      name: "HDHMR Marine Board (Merino)",
-      specs: ["High density high moisture resistance", "Smooth calibrated surface"],
-      detail: ["Brand: Merino Marine Board", "Type: HDHMR — High Density High Moisture Resistance board", "Made of: High-density wood fibres", "Surface: Smooth calibrated surface", "Features: Moisture resistant, stronger than MDF", "Use: Kitchens, wardrobes and interior furniture"],
-      desc: "Merino Marine Board HDHMR — a High Density High Moisture Resistance board made from high-density wood fibres with a smooth calibrated surface. Moisture resistant and stronger than MDF, it suits kitchens, wardrobes and interior furniture. Ask for current price and thickness availability.",
-      price: "Ask for price",
-      image: "images/merino-hdhmr-marine-board.webp",
-      images: ["images/merino-hdhmr-marine-board.webp", "images/mdf-vs-hdhmr-vs-plywood.jpg"],
-      tags: ["hdhmr", "hdmr", "mdf", "hdf", "merino", "marine board", "moisture resistant", "high density", "kitchen", "wardrobe", "board"],
-    },
   ];
 
   const ICONS = {
