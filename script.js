@@ -368,6 +368,17 @@
       images: ["images/fevicol-probond.jpg", "images/fevicol-probond-promo.jpg"],
     },
     {
+      id: "adh-fevicol-relam",
+      category: "adhesives",
+      name: "Fevicol Relam laminate adhesive",
+      specs: ["Pidilite Fevicol Relam", "Laminate adhesive for pasting laminate on laminate, 450 g"],
+      detail: ["Brand: Pidilite / Fevicol", "Type: Synthetic rubber base laminate adhesive (woodworking adhesive) in a cartridge", "Use: Pasting a new laminate directly over an old laminate", "Also for: Laminates, veneers, particle boards, plywood", "Features: Extra strong, heat resistant, durable bond, high grab (no masking tape needed), thick and non-sagging, hassle-free cartridge application", "Pack shown: 450 g"],
+      desc: "Pidilite Fevicol Relam — synthetic rubber base laminate adhesive in a cartridge, made for pasting a new laminate directly over an old laminate, so furniture renovation is easy. Also for laminates, veneers, particle boards and plywood. Extra strong and heat resistant with a durable bond; high grab means you can work without masking tape. Thick and non-sagging, with hassle-free cartridge application. 450 g pack shown. Ask for current price.",
+      price: "Ask for price",
+      image: "images/fevicol-relam-promo.jpg",
+      images: ["images/fevicol-relam-promo.jpg", "images/fevicol-relam-cartridges.jpg", "images/fevicol-relam-cabinet.jpg", "images/fevicol-relam-why.jpg", "images/fevicol-relam-features.jpg", "images/fevicol-relam-pack.jpg"],
+    },
+    {
       id: "mnt-terminator-clear",
       category: "maintenance",
       name: "Terminator Clear Wood Preservative",
