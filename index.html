@@ -27,6 +27,9 @@
           WhatsApp
         </a>
       </nav>
+      <button type="button" class="search-toggle" id="searchToggle" aria-label="Search products" aria-haspopup="dialog" aria-expanded="false" aria-controls="searchOverlay">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
@@ -220,6 +223,21 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Product search -->
+  <div class="search-overlay" id="searchOverlay" hidden role="dialog" aria-modal="true" aria-label="Search products">
+    <div class="search-backdrop" data-close-search></div>
+    <div class="search-panel">
+      <form class="search-form" id="searchForm" role="search" autocomplete="off">
+        <svg class="search-form-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
+        <label for="searchInput" class="visually-hidden">Search products</label>
+        <input type="search" id="searchInput" placeholder="Search plywood, Fevicol, marble..." enterkeyhint="search" aria-controls="searchResults" aria-describedby="searchStatus" />
+        <button type="button" class="search-close" data-close-search aria-label="Close search">&times;</button>
+      </form>
+      <p class="visually-hidden" id="searchStatus" aria-live="polite"></p>
+      <div class="search-results" id="searchResults"></div>
     </div>
   </div>
 

@@ -459,6 +459,7 @@
   };
 
   let activeFilter = "all";
+  let searchQuery = "";
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
@@ -553,12 +554,7 @@
     $$(".cat-card").forEach((c) =>
       c.classList.toggle("active", filter !== "all" && c.dataset.filter === filter)
     );
-    const label = $("#filterLabel");
-    if (filter === "all") {
-      label.textContent = "Showing all categories";
-    } else {
-      label.textContent = "Showing: " + (catById(filter)?.name || filter);
-    }
+    updateFilterLabel();
     renderProducts();
     if (scroll) {
       $("#products").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -567,13 +563,17 @@
 
   function renderProducts() {
     const grid = $("#productGrid");
-    const list =
+    let list =
       activeFilter === "all"
         ? PRODUCTS
         : PRODUCTS.filter((p) => p.category === activeFilter);
+    if (searchQuery) list = searchProducts(searchQuery, list);
 
     if (!list.length) {
-      grid.innerHTML = '<p class="empty-state">No products in this category yet.</p>';
+      grid.innerHTML = searchQuery
+        ? '<p class="empty-state">No products match \u201c' + escapeHtml(searchQuery) + '\u201d. <a href="' +
+          escapeHtml(searchWaLink(searchQuery)) + '" target="_blank" rel="noopener">Ask us on WhatsApp</a></p>'
+        : '<p class="empty-state">No products in this category yet.</p>';
       return;
     }
 
@@ -621,6 +621,211 @@
         );
       })
       .join("");
+  }
+
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+
+  /* Search */
+  function normalize(str) {
+    return String(str || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9.]+/g, " ")
+      .trim();
+  }
+
+  const searchIndex = new Map();
+  function searchText(p) {
+    if (!searchIndex.has(p.id)) {
+      const cat = catById(p.category) || {};
+      const parts = [
+        p.name, p.brand, p.grade, cat.name, cat.short, p.category,
+        (p.specs || []).join(" "), (p.detail || []).join(" "), p.desc,
+        (p.tags || []).join(" "),
+      ];
+      searchIndex.set(p.id, " " + normalize(parts.filter(Boolean).join(" ")) + " ");
+    }
+    return searchIndex.get(p.id);
+  }
+
+  function searchProducts(query, source) {
+    const words = normalize(query).split(" ").filter(Boolean);
+    const list = source || PRODUCTS;
+    if (!words.length) return list.slice();
+    const scored = [];
+    list.forEach(function (p, i) {
+      const text = searchText(p);
+      if (!words.every((w) => text.indexOf(w) !== -1)) return;
+      const name = " " + normalize(p.name) + " ";
+      let score = 0;
+      words.forEach(function (w) {
+        if (name.indexOf(" " + w) !== -1) score += 3;
+        else if (name.indexOf(w) !== -1) score += 2;
+        else if (text.indexOf(" " + w) !== -1) score += 1;
+      });
+      scored.push({ p: p, score: score, i: i });
+    });
+    scored.sort((a, b) => b.score - a.score || a.i - b.i);
+    return scored.map((x) => x.p);
+  }
+
+  function searchWaLink(query) {
+    return waLink("Hi, I'm looking for " + query.trim());
+  }
+
+  function updateFilterLabel() {
+    const label = $("#filterLabel");
+    let text =
+      activeFilter === "all"
+        ? "Showing all categories"
+        : "Showing: " + (catById(activeFilter)?.name || activeFilter);
+    if (searchQuery) {
+      label.innerHTML =
+        escapeHtml(text) + " \u00b7 matching \u201c" + escapeHtml(searchQuery) + "\u201d " +
+        '<button type="button" class="clear-search" data-clear-search>Clear search</button>';
+    } else {
+      label.textContent = text;
+    }
+  }
+
+  const SEARCH_LIMIT = 8;
+  const searchOverlay = $("#searchOverlay");
+  const searchInput = $("#searchInput");
+  const searchResults = $("#searchResults");
+  let lastSearchResults = [];
+
+  function renderSearchResults() {
+    const q = searchInput.value.trim();
+    const status = $("#searchStatus");
+    if (!q) {
+      lastSearchResults = [];
+      searchResults.innerHTML =
+        '<p class="search-hint">Type a product name, brand or type \u2014 e.g. marine, Fevicol, marble, mouldings.</p>';
+      status.textContent = "";
+      return;
+    }
+    const all = searchProducts(q);
+    lastSearchResults = all.slice(0, SEARCH_LIMIT);
+    if (!all.length) {
+      searchResults.innerHTML =
+        '<div class="search-empty"><p><strong>No products found</strong> for \u201c' + escapeHtml(q) + '\u201d.</p>' +
+        '<a class="btn btn-wa btn-sm" href="' + escapeHtml(searchWaLink(q)) + '" target="_blank" rel="noopener">Ask us on WhatsApp</a></div>';
+      status.textContent = "No products found";
+      return;
+    }
+    searchResults.innerHTML =
+      '<ul class="search-list" aria-label="Search results">' +
+      lastSearchResults
+        .map(function (p) {
+          const cat = catById(p.category);
+          const img = primaryImage(p);
+          return (
+            '<li><button type="button" class="search-result" data-search-id="' + escapeHtml(p.id) + '">' +
+            '<span class="search-thumb ' + cat.tone + '">' +
+            (img ? '<img src="' + escapeHtml(img) + '" alt="" loading="lazy" />' : ICONS[cat.icon]) +
+            "</span>" +
+            '<span class="search-text"><span class="search-name">' + escapeHtml(p.name) + "</span>" +
+            '<span class="search-cat">' + escapeHtml(cat.name) + "</span></span>" +
+            "</button></li>"
+          );
+        })
+        .join("") +
+      "</ul>" +
+      '<button type="button" class="search-all" data-search-all>' +
+      (all.length > SEARCH_LIMIT ? "See all " + all.length + " results" : "Show in product list") +
+      " \u2192</button>";
+    status.textContent = all.length + (all.length === 1 ? " product found" : " products found");
+  }
+
+  function openSearch() {
+    searchOverlay.hidden = false;
+    document.body.classList.add("search-open");
+    $("#searchToggle").setAttribute("aria-expanded", "true");
+    $("#nav").classList.remove("open");
+    $("#navToggle").setAttribute("aria-expanded", "false");
+    $("#navToggle").setAttribute("aria-label", "Open menu");
+    renderSearchResults();
+    searchInput.focus();
+    searchInput.select();
+  }
+
+  function closeSearch(restoreFocus) {
+    if (searchOverlay.hidden) return;
+    searchOverlay.hidden = true;
+    document.body.classList.remove("search-open");
+    $("#searchToggle").setAttribute("aria-expanded", "false");
+    if (restoreFocus) $("#searchToggle").focus();
+  }
+
+  function openFromSearch(id) {
+    closeSearch(false);
+    openModal(id);
+  }
+
+  function applySearchToGrid() {
+    searchQuery = searchInput.value.trim();
+    closeSearch(false);
+    activeFilter = "all";
+    $$(".chip").forEach((c) => c.classList.toggle("active", c.dataset.filter === "all"));
+    $$(".cat-card").forEach((c) => c.classList.remove("active"));
+    updateFilterLabel();
+    renderProducts();
+    $("#products").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function bindSearch() {
+    $("#searchToggle").addEventListener("click", function () {
+      if (searchOverlay.hidden) openSearch();
+      else closeSearch(true);
+    });
+    searchInput.addEventListener("input", renderSearchResults);
+    $("#searchForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (lastSearchResults.length) openFromSearch(lastSearchResults[0].id);
+    });
+    searchOverlay.addEventListener("click", function (e) {
+      const r = e.target.closest("[data-search-id]");
+      if (r) return openFromSearch(r.dataset.searchId);
+      if (e.target.closest("[data-search-all]")) return applySearchToGrid();
+      if (e.target.closest("[data-close-search]")) closeSearch(true);
+    });
+    searchOverlay.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeSearch(true);
+        return;
+      }
+      if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+      const items = $$(".search-result", searchResults);
+      if (!items.length) return;
+      const idx = items.indexOf(document.activeElement);
+      e.preventDefault();
+      if (e.key === "ArrowDown") {
+        items[idx < 0 ? 0 : Math.min(idx + 1, items.length - 1)].focus();
+      } else if (idx <= 0) {
+        searchInput.focus();
+      } else {
+        items[idx - 1].focus();
+      }
+    });
+    // Keep keyboard focus inside the search dialog
+    searchOverlay.addEventListener("focusout", function (e) {
+      if (!searchOverlay.hidden && e.relatedTarget && !searchOverlay.contains(e.relatedTarget)) {
+        searchInput.focus();
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-clear-search]")) {
+        searchQuery = "";
+        updateFilterLabel();
+        renderProducts();
+      }
+    });
   }
 
   /* Modal */
@@ -800,7 +1005,7 @@
     });
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !modal.hidden) closeModal();
+      if (e.key === "Escape" && !modal.hidden && searchOverlay.hidden) closeModal();
     });
 
     $("#tradeCta").addEventListener("click", function () {
@@ -831,6 +1036,7 @@
     renderCategories();
     renderProducts();
     bindEvents();
+    bindSearch();
   }
 
   if (document.readyState === "loading") {
