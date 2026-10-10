@@ -401,6 +401,18 @@
       images: ["images/bubble-guard-poster.jpg", "images/bubble-guard-sheet.jpg", "images/bubble-guard-stack.jpg", "images/bubble-guard-floor-room.jpg", "images/bubble-guard-floor-site.jpg", "images/bubble-guard-info.webp"],
     },
     {
+      id: "mnt-marinekoat",
+      category: "maintenance",
+      name: "Pidilite Marinekoat water resistant plywood coating",
+      specs: ["Pidilite Marinekoat", "Water resistant plywood coating"],
+      detail: ["Brand: Pidilite", "Type: Water resistant plywood coating, applied by brush or roller", "Use: Protects furniture from damage through water seepage from damp walls (\"Furniture ka Raincoat\")", "Pack claim: 100% protection against water seepage", "Application areas: Backside of cupboards, wardrobes, inside of box bed, shelves", "How to use: 1) Clean the surface free from dust. 2) Apply first coat and wait 10 mins to dry. 3) Apply second coat and wait 10 mins to dry. 4) On complete drying, fix the furniture to the wall", "Pack shown: 1 litre jar; a smaller pack is also available"],
+      desc: "Pidilite Marinekoat — water resistant coating brushed or rolled onto plywood to protect furniture from damage through water seepage from damp walls: \"Furniture ka Raincoat\". Use it on the backside of cupboards, wardrobes, inside of box beds and shelves. How to use: clean the surface free from dust, apply the first coat and wait 10 minutes to dry, apply the second coat and wait 10 minutes to dry, then once it has completely dried, fix the furniture to the wall. 1 litre jar shown; a smaller pack is also available. Ask for current price.",
+      price: "Ask for price",
+      tags: ["marinekoat", "marine koat", "marine coat", "pidilite", "waterproof coating", "water resistant coating", "plywood coating", "seepage", "damp wall"],
+      image: "images/marinekoat-1l.jpg",
+      images: ["images/marinekoat-1l.jpg", "images/marinekoat-features.jpg", "images/marinekoat-uses.jpg", "images/marinekoat-how-to-use.jpg", "images/marinekoat-applying.jpg"],
+    },
+    {
       id: "mould-decorative-corners",
       category: "moulding",
       name: "Decorative corners and appliqués",
