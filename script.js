@@ -1114,3 +1114,42 @@
     init();
   }
 })();
+
+/* ===== PWA: service worker + install prompt ===== */
+(function () {
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("sw.js").catch(function () {});
+    });
+  }
+  var standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+  var btn = document.getElementById("installBtn");
+  var hint = document.getElementById("iosHint");
+  if (standalone) return;
+  var deferred = null;
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    deferred = e;
+    if (btn) btn.hidden = false;
+  });
+  if (btn) btn.addEventListener("click", function () {
+    if (!deferred) return;
+    deferred.prompt();
+    deferred.userChoice.finally(function () { deferred = null; btn.hidden = true; });
+  });
+  window.addEventListener("appinstalled", function () { if (btn) btn.hidden = true; });
+
+  var ua = navigator.userAgent;
+  var isIOS = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+  var KEY = "omkarIosHintDismissed";
+  var dismissed = false;
+  try { dismissed = localStorage.getItem(KEY) === "1"; } catch (e) {}
+  if (hint && isIOS && isSafari && !dismissed) {
+    setTimeout(function () { hint.hidden = false; }, 2500);
+    document.getElementById("iosHintClose").addEventListener("click", function () {
+      hint.hidden = true;
+      try { localStorage.setItem(KEY, "1"); } catch (e) {}
+    });
+  }
+})();

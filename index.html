@@ -10,6 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3d2914" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Omkar Plywood" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 </head>
 <body>
   <!-- Sticky Header -->
@@ -27,6 +34,10 @@
           WhatsApp
         </a>
       </nav>
+      <button type="button" class="install-btn" id="installBtn" hidden aria-label="Install Omkar Plywood app">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span>Install app</span>
+      </button>
       <button type="button" class="search-toggle" id="searchToggle" aria-label="Search products" aria-haspopup="dialog" aria-expanded="false" aria-controls="searchOverlay">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>
       </button>
@@ -224,6 +235,12 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- iOS add-to-home-screen hint -->
+  <div class="ios-hint" id="iosHint" hidden role="status">
+    <p>Install this app: tap <strong>Share</strong> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="m7 8 5-5 5 5"/><path d="M5 12v8h14v-8"/></svg>, then <strong>Add to Home Screen</strong>.</p>
+    <button type="button" class="ios-hint-close" id="iosHintClose" aria-label="Dismiss">&times;</button>
   </div>
 
   <!-- Product search -->
